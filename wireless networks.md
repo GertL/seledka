@@ -19,8 +19,6 @@
 
 * Recommendations to mitigare risks:
 
-  * Wherever possible stick to well-known networks, like Starbucks. These Wi-Fi networks are likely less suspect because the people and companies operating them are already getting money out of you.
-
   * Stick with HTTPs: When you browse over HTTPS, people on the same Wi-Fi network as you can't snoop on the data that travels between you and the server of the website you're connecting to. Over HTTP? It's relatively easy for them to watch what you're doing.
 
   * Be very wary of signing up for public Wi-Fi access if you're getting asked for a bunch of personal details, like your email address or your phone number. If you absolutely have to connect to networks like this, stick to places you trust (see above) and consider using an alternative email address that isn't your primary one.
