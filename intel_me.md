@@ -49,10 +49,10 @@ A vulnerability found just by reverse engineering it. Woao.
 
 ## References
 1. Garrett, Matthew. Intel's Remote AMT Vulnerability. Dreamwidth. [Online](https://mjg59.dreamwidth.org/48429.html). 
-2. Sklyarov, Dmitry. Intel ME: The Way of Static Analysis. Positive Technologies. [Online](http://blog.ptsecurity.com/2017/04/intel-me-way-ofstatic-analysis.html). 
+2. Sklyarov, Dmitry. Intel ME: The Way of Static Analysis. Positive Technologies. [Online](http://blog.ptsecurity.com/2017/04/intel-me-way-of-static-analysis.html). 
 3. Intel. What is Intel Management Engine? Intel. [Online](https://www.intel.com/content/www/us/en/support/articles/000008927/software/chipset-software.html). 
-4. Portnoy, Erica and Eckersley, Peter. Intel's Management Engine is a security hazard, and users need a way to disable it. Electronic Frontier Foundation. [Online](https://www.eff.org/deeplinks/2017/05/intelsmanagement-engine-security-hazard-and-users-need-way-disable-it). 
-5. Linux Foundation. Program Schedule. Linux Foundation Events 2017. [Online](http://events17.linuxfoundation.org/events/embedded-linuxconference-europe/program/schedule). 
+4. Portnoy, Erica and Eckersley, Peter. Intel's Management Engine is a security hazard, and users need a way to disable it. Electronic Frontier Foundation. [Online](https://www.eff.org/deeplinks/2017/05/intels-management-engine-security-hazard-and-users-need-way-disable-it). 
+5. Linux Foundation. Program Schedule. Linux Foundation Events 2017. [Online](http://events17.linuxfoundation.org/events/embedded-linux-conference-europe/program/schedule). 
 6. Chan, Leon. Google Working To Remove MINIX-Based ME From Intel Platforms. Tom's Hardware. [Online](https://www.tomshardware.com/news/google-removing-minix-managementengine-intel,35876.html). 
 7. Intel. Intel Active Management technology. Intel Software Developer Zone. [Online](https://software.intel.com/en-us/amt-sdk). 
 8. Libreboot. Libreboot: Frequently Asked Questions. Libreboot. [Online](https://libreboot.org/faq.html#intel). 
