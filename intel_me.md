@@ -19,7 +19,7 @@ Second, it has full control over your computer. It runs under any layer of prote
 
 Third, it has plenty of vulnerabilities. Ever since the discovery of MINIX 3 inside the Intel ME, there's been a big effort in finding vulnerabilities. In my experience, usually finding a vulnerability for any type of software like this (say for example, the OS that runs inside a videogame console), is big news. Intel ME's vulnerabilities would be even bigger news, if it wasn't for the fact that it's plagued with them. A simple search will clarify this statement way better than 100 reference links below.
 
-On a personal side-note, my favorite vulnerability is this one: [Reverse-engineering the Intel Management Engine’s ROMP module] (https://puri.sm/posts/reverse-engineering-the-intel-management-engine-romp-module/) A vulnerability found just by reverse engineering it. Woao.
+On a personal side-note, my favorite vulnerability is this one: [Reverse-engineering the Intel Management Engine’s ROMP module](https://puri.sm/posts/reverse-engineering-the-intel-management-engine-romp-module/) A vulnerability found just by reverse engineering it. Woao.
 
 ## Disabling Intel ME... partially
 
