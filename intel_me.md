@@ -11,7 +11,7 @@ If you're deeply concerned about privacy, vulnerabilities in your CPU and you ar
 
 ## Introduction: Intel's All Powerfull Piece of Software
 
-The Intel Management Engine is a piece of firmware stored inside every Intel processor since around 2008. It operates as the backbone of many other features, one of them is the Active Management Technology or AMT. There are a few important parts to understand about the Intel ME. 
+The Intel Management Engine is a piece of firmware stored inside every Intel processor since around 2008. It operates as the backbone of many other features, one of them is the Active Management Technology or AMT. There are a few important parts to understand about the Intel ME.
 
 First, it is closed source. That means, not really much is known about it. As a matter of fact, we didn't really care much about it until recently that it was found out it runs on MINIX 3. This created concern in the community because the fact that it runs on a full fledged (not actively supported) OS means there's vulnerabilities to be exploited. The fact that it closed source also means it could be a backdoor. This was the first theory by many, but it hasn't been proved yet.
 
