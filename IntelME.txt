@@ -1,0 +1,44 @@
+There are no secrets better kept than secrets that everybody guesses but the secret about Intel management engine was kept secret till 2014, when Igor Skotchinky pointed out about it on his presentation "intel ME secrets" -- https://www.slideshare.net/codeblue_jp/igor-skochinsky-enpub
+
+
+Intel management engine has been included on Intel chipset since 2008, tiny computer within computer with full access to your pc's memory display network and input devices. As intel puts in the Management engine is a small low-power computer subsystem. It performs various tasks while the system is in sleep during boot process and when your system is running 
+In other words this is parallel operating system running on an isolated chip but with access to your PC's hardware. It runs when your computer is in sleep, while it's booting up and while your operating system is running.  It has full access to your system hardware. Unfortunately, modern chipsets include Intel ME as part of the northbridge which is essential for your computer to work. Officially, there is no way to switch off Intel ME, even if some exploit seems to have successfully been used to disable it.
+
+IT RUNS on "Ring-3" what does that mean?
+
+The protection rings are the various protection mechanisms implemented by a processor allowing, for example, the kernel to use certain processor instructions whereas applications running on top of it cannot do it. The key point is software running in a “ring” has total control over software running on a higher level ring. Something that can be used for monitoring, protection or to present an idealized or virtualized execution environment to software running in higher level rings.
+
+Typically, on x86, applications run in ring 1, the kernel run in ring 0 and an eventual hypervisor on ring -1. “ring -2” is sometimes used for the processor microcode. And “ring -3” is used in several papers to talk about Intel ME as a way to explain it has even higher control than everything running on the main CPU. 
+
+//more about protection_rings https://en.wikipedia.org/wiki/Protection_ring
+//if you are more interested in the several layers of execution of a typical Intel-based computer link: https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/ia-introduction-basics-paper.pdf
+
+
+Intel Me capabilities 
+
+Active even in power off state so long as main power is connected
+Has its own network stack for out of brand communication with NIC Bypassing the OS completely
+Has full read/write access to all areas of s system main memory
+Has full access to system bus 
+Operates in SMM or protected system management mode so OS cannot see or interfere with its operations 
+If it recieves a magic packet from NIC MAT can be activated remotely and power on/off system load/alter the OS change BIOs settings view video output anything a local user at the terminal could do
+
+How intel locks us into using IME 
+
+IME firmware located in region of SPI flash that is inaccessible to BIOS/OS
+IME code modules are RSA signed. If signature verification fails system will not boot
+LZMA and huffman compressed with hidden directory to prevent reverse engineering 
+Additional IME verification module runs every 30 sec to check if valid signed IME is present if not the computer, shuts down.
+
+By design, Intel ME has access to the other sub-systems of the motherboard. Including the RAM, network devices, and cryptographic engine. And that as long as the motherboard is powered. In addition, it can directly access the network interface using a dedicated link for out-of-band communication, thus even if you monitor traffic with a tool like Wireshark or tcpdump you might not necessarily see the data packet sent by Intel ME. Intel ME has the potential for reading any byte in RAM in search for some keyword or to send those data through the NIC. In addition, since Intel ME can communicate with the operating system—and potentially applications— running on the main CPU, we could imagine scenarios where Intel ME would be (ab)used by a malicious software to bypass OS level security policies.
+
+skotchinky explanation of intel ME :: https://www.youtube.com/watch?v=4kCICUPc9_8
+from skotchinsky as well : https://github.com/skochinsky/me-tools
+useful link for disabling IME:
+https://www.youtube.com/watch?v=WJo8RsJeqxU&t=1034s
+
+GM45 chipsets: remove the ME https://libreboot.org/docs/hardware/gm45_remove_me.html 
+
+what kind of computer should i buy if i am too much concerned about ME... DEll computers -offers a service to disable IME or lenovo thinkpad X200 or T series
+link to the list of processors that enable to disable the ME: http://www.thinkwiki.org/wiki/Category:T400
+guide how to do: https://libreboot.org/docs/install/t400_external.html
